@@ -4,14 +4,29 @@
 
 #### HTML
 
+Default structure of
+
 ---
 
 #### CSS
 
-On hover property
+- Class `.class`
+
+- Defualt Property `html` or `h1`
+
+- ID selector `#id`
+
+- On Hover Property `#front:hover`
+
+Some Basic Selectors
 
 ```css
-
+.footer {
+    color: rgb (225, 224, 224);
+    padding: 10px 10% 10in 50px;
+    text-align: center;
+    left: 10px; /*Use in the pacman lab to move pacman*/
+}
 ```
 
 ---
@@ -21,6 +36,33 @@ On hover property
 ---
 
 #### Jquery
+
+The jQuery syntax is tailor-made for selecting HTML elements and performing some action on the element(s).
+
+Basic syntax is:
+
+- `$(selector).action()`
+
+- A `$` sign to define/access jQuery
+
+- A `(selector)` to "query (or find)" HTML elements
+
+- A jQuery `action()` to be performed on the element(s)
+  Examples:
+
+```js
+$(this).hide(); // hides the current element.
+$("p").hide(); // hides all <p> elements.
+$(".test").hide(); // hides all elements with class="test".
+$("#test").hide(); // hides the element with id="test".
+
+$(document).ready(function () {
+    // Hides an elemetn when a user clicks on teh button
+    $("button").click(function () {
+        $(".test").hide(); // Change with .test or p
+    });
+});
+```
 
 ---
 
