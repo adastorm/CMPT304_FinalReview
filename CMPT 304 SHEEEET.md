@@ -48,6 +48,7 @@ Some Basic Selectors
   position: relative;/*reletive to every other object*/
   position: fixed;/*on the exact screen coordinates*/
   position: absolute; /*move with other things but to page coordinates*/
+  
 }
 ```
 
