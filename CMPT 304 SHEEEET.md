@@ -11,6 +11,8 @@ Default structure of html (Shamelessley stolen from w3)
 <html>
     <head>
         <title> Page Title </title> <!-- Comment -->
+        <link href = "dancingpieman.css" type = "text/css" rel = "stylesheet"> <!--Links the css sheet-->
+        <script type="text/Javascript" src="dancingpieman.js" defer></script>  <!--Preloads and links the JS-->
     </head>
     <body>
         <h1> This is a header </h1>
@@ -20,32 +22,28 @@ Default structure of html (Shamelessley stolen from w3)
 </html>
 ```
 
-- Table row `<tr>` Table Header `<th>` Table collum(data) `<td>`
-
-- Ordered list: and unordered list
-
-- Radio Selectors + buttons
+-   Table row `<tr>` Table Header `<th>` Table collum(data) `<td>`
+-   Ordered list: and unordered list
+-   Radio Selectors + buttons
 
 ---
 
 #### CSS
 
-- Class `.class`
-
-- Defualt Property `html` or `h1`
-
-- ID selector `#id`
-
-- On Hover Property `#front:hover` or `.tag:active`
+-   Class `.class`
+-   Defualt Property `html` or `h1`
+-   ID selector `#id`
+-   On Hover Property `#front:hover` or `.tag:active`
 
 Some Basic Selectors
+![alt text](ss.jpg "Title")
 
 ```css
 .footer {
-    color: rgb (225, 224, 224);
-    padding: 10px 10% 10in 50px;
-    text-align: center;
-    left: 10px; /*Use in the pacman lab to move pacman*/
+	color: rgb (225, 224, 224);
+	padding: 10px 10% 10in 50px;
+	text-align: center;
+	left: 10px; /*Use in the pacman lab to move pacman*/
 }
 ```
 
@@ -63,9 +61,9 @@ window.setInterval(startMotion,100); //starts interval with function startMotion
 function changeImage(thing) // Example of function header
 ```
 
-- arrays
+-   arrays
 
-- operators ==, ===
+-   operators ==, ===
 
 ---
 
@@ -75,24 +73,24 @@ The jQuery syntax is tailor-made for selecting HTML elements and performing some
 
 Basic syntax is:
 
-- `$(selector).action()`
+-   `$(selector).action()`
 
-- A `$` sign to define/access jQuery
+-   A `$` sign to define/access jQuery
 
-- A `(selector)` to "query (or find)" HTML elements
+-   A `(selector)` to "query (or find)" HTML elements
 
-- A jQuery `action()` to be performed on the element(s)
-  Examples:
+-   A jQuery `action()` to be performed on the element(s)
+    Examples:
 
-- `.append()`for after the paragraph, `.prepend()`
+-   `.append()`for after the paragraph, `.prepend()`
 
-- `.remove()`remove everything from the selected jquery
+-   `.remove()`remove everything from the selected jquery
 
 Including jquery in project (incuding from google may be advantagous because it might be allready cashed on the users system)
 
 ```js
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs.jquery....."></script>
+	<script src="https://ajax.googleapis.com/ajax/libs.jquery....."></script>
 </head>
 ```
 
@@ -105,10 +103,10 @@ $("#test").hide(); // hides the element with id="test".
 $el.fadeOut(500).fadeIn(100); //Causes the element to flash once
 
 $(document).ready(function () {
-    // Hides an elemetn when a user clicks on teh button
-    $("button").click(function () {
-        $(".test").hide(); // Change with .test or p
-    });
+	// Hides an elemetn when a user clicks on teh button
+	$("button").click(function () {
+		$(".test").hide(); // Change with .test or p
+	});
 });
 ```
 
@@ -116,8 +114,9 @@ $(document).ready(function () {
 
 #### PHP
 
-- GET puts the user input in the URL, while the POST does not 
-- HTML special chars prevent malicious code from being run on your website
+-   GET puts the user input in the URL, while the POST does not
+-   HTML special chars prevent malicious code from being run on your website
+-   Only the HTML output is visable in the browser
 
 ```php
 $x = 3.14;
@@ -130,66 +129,64 @@ for($i=0; $i<10;$i++){
 echo "<a href=\"dictionary.php?searchWord=computing\">computing</a>";
 
 
-//connect MySQL 
+//connect MySQL
 $db = new mysqli('localhost', 'root', 'mmljar', 'bookstore');
+
+//Qyery the sql
+$query = "SELECT Author, Title FROM books WHERE $searchtype = ?";
+$stmt = $db->prepare($query);
+$stmt->bind_param('s', $searchterm);
+$stmt->execute();
 ```
 
 ---
 
 #### MySQL
 
-Exit a query using 
+Advantageous because multiple people can acces and edit data at once
 
-- ```sql
-  \c //Exit a query using
-  ```
+```sql
+  \c --Exit a query using
 
-Create a database
+  CREATE TABLE contacts (Name char(50), Number int(10) unsigned); -- Create a database
 
-- ```php
-  CREATE TABLE contacts (Name char(50), Number int(10) unsigned);
-  ```
+  INSERT INTO books VALL --How to add a book to the database
 
-How to add a book to the database
-
-- ```sql
-  INSERT INTO books VALL
-  ```
+  describe books --Method to show different keys in the table. When inserting duplicate data will show duplicate data in table.
+```
 
 Show all of the data from inside of the database
 
-- ```sql
+```sql
   SELECT * FROM books
   SELECT title, price FROM books
-  ```
-
-Method to show the use of the different keys in the table. When inserting duplicate data this will show you if there is duplicate data in the table.
-
-- ```sql
-  describe books
-  ```
+```
 
 Method to update or delete an entry in a database
 
-- ```sql
+```sql
   DELETE FROM books WHERE ISBN = 4;
   SELECT * FROM books WHERE Price <= 19;
-  ```
+```
 
 How to edit an entry from the table
 
-- ```sql
+```sql
   UPDATE books SET Title = 'REPLECEMENT' WHERE ISBN = 'xxx-xxx-xxx';
-  ```
+```
 
 How to alter the type iside a table
 
-- ```sql
-    modify collumn Price decimal(6,2);
-  ```
-  
-  In this example using decimal wrather than a floatng point will lead you to have an exact number wrather than the floating point
+```sql
+  modify collumn Price decimal(6,2);
+```
 
-- When inserting into the database, make sure to insert the data in order and to provide quotations around string and none around floats
+In this example using decimal wrather than a floatng point will lead you to have an exact number wrather than the floating point
 
-- Also when entering a thing above the limit, it trunkates the limit
+-   When inserting into the database, make sure to insert the data in order and to provide quotations around string and none around floats
+
+-   Also when entering a thing above the limit, it trunkates the limit
+
+#### Ajax
+
+-   Uses js to get information from a server to refresh a certain part of the server without refreshing the whole page
