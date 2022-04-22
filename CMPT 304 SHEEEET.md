@@ -16,7 +16,6 @@ Default structure of html (Shamelessley stolen from w3)
         <h1> This is a header </h1>
         <p> This is a paragrph </p>
         <a href = "/index" target="_blank"> <!-- Link open in new page -->
-        <iframe src="url" title="desc."></iframe> <!--Use to embed site in site-->
     </body>
 </html>
 ```
@@ -37,7 +36,7 @@ Default structure of html (Shamelessley stolen from w3)
 
 - ID selector `#id`
 
-- On Hover Property `#front:hover`
+- On Hover Property `#front:hover` or `.tag:active`
 
 Some Basic Selectors
 
@@ -60,8 +59,8 @@ el.addEventListener('click', clickOccured, false); //
 var tbl = document.querySelector('table#myTable');  // Find table in document
 var rw = document.createElement('tr'); //Creates a table row
 table.appendChild(rw); //appends to doc
-
 window.setInterval(startMotion,100); //starts interval with function startMotion and time of 100ms
+function changeImage(thing) // Example of function header
 ```
 
 - arrays
