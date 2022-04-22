@@ -132,17 +132,17 @@ echo "<a href=\"dictionary.php?searchWord=computing\">computing</a>";
 
 
 //connect MySQL 
-vv
+$db = new mysqli('localhost', 'root', 'mmljar', 'bookstore');
 ```
 
 ---
 
 #### MySQL
 
-Exit a query
+Exit a query using 
 
 - ```sql
-  \c
+  \c //Exit a query using
   ```
 
 Create a database
