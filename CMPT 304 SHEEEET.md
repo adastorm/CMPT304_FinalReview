@@ -4,7 +4,28 @@
 
 #### HTML
 
-Default structure of
+Default structure of html (Shamelessley stolen from w3)
+
+```html
+<!DOCTYPE>
+<html>
+    <head>
+        <title> Page Title </title> <!-- Comment -->
+    </head>
+    <body>
+        <h1> This is a header </h1>
+        <p> This is a paragrph </p>
+        <a href = "/index" target="_blank"> <!-- Link open in new page -->
+        <iframe src="url" title="desc."></iframe> <!--Use to embed site in site-->
+    </body>
+</html>
+```
+
+- Table row `<tr>` Table Header `<th>` Table collum(data) `<td>`
+
+- Ordered list: and unordered list
+
+- Radio Selectors + buttons
 
 ---
 
@@ -33,6 +54,20 @@ Some Basic Selectors
 
 #### Java Script
 
+```js
+el.addEventListener('click', clickOccured, false); //
+
+var tbl = document.querySelector('table#myTable');  // Find table in document
+var rw = document.createElement('tr'); //Creates a table row
+table.appendChild(rw); //appends to doc
+
+window.setInterval(startMotion,100); //starts interval with function startMotion and time of 100ms
+```
+
+- arrays
+
+- operators ==, ===
+
 ---
 
 #### Jquery
@@ -50,11 +85,25 @@ Basic syntax is:
 - A jQuery `action()` to be performed on the element(s)
   Examples:
 
+- `.append()`for after the paragraph, `.prepend()`
+
+- `.remove()`remove everything from the selected jquery
+
+Including jquery in project (incuding from google may be advantagous because it might be allready cashed on the users system)
+
+```js
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs.jquery....."></script>
+</head>
+```
+
 ```js
 $(this).hide(); // hides the current element.
 $("p").hide(); // hides all <p> elements.
 $(".test").hide(); // hides all elements with class="test".
 $("#test").hide(); // hides the element with id="test".
+
+$el.fadeOut(500).fadeIn(100); //Causes the element to flash once
 
 $(document).ready(function () {
     // Hides an elemetn when a user clicks on teh button
@@ -68,16 +117,38 @@ $(document).ready(function () {
 
 #### PHP
 
+- GET puts the user input in the URL, while the POST does not 
+- HTML special chars prevent malicious code from being run on your website
+
+```php
+$x = 3.14;
+//function that prints the first 10 entries of the array $arr seperated by a comma
+for($i=0; $i<10;$i++){
+  echo "$arr[$i],";
+}
+
+//Query a page in post and get
+echo "<a href=\"dictionary.php?searchWord=computing\">computing</a>";
+
+
+//connect MySQL 
+vv
+```
+
 ---
 
 #### MySQL
-
----
 
 Exit a query
 
 - ```sql
   \c
+  ```
+
+Create a database
+
+- ```php
+  CREATE TABLE contacts (Name char(50), Number int(10) unsigned);
   ```
 
 How to add a book to the database
