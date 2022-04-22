@@ -44,11 +44,14 @@ Some Basic Selectors
 	padding: 10px 10% 10in 50px;
 	text-align: center;
 	left: 10px; /*Use in the pacman lab to move pacman*/
-  position: static;/*default which is not affected by the positioning modifiers*/
-  position: relative;/*reletive to every other object*/
-  position: fixed;/*on the exact screen coordinates*/
-  position: absolute; /*move with other things but to page coordinates*/
-  
+	position: static; /*default which is not affected by the positioning modifiers*/
+	position: relative; /*reletive to every other object*/
+	position: fixed; /*on the exact screen coordinates*/
+	position: absolute; /*move with other things but to page coordinates*/
+}
+.container {
+	display: grid;
+	grid-template-colums: auto auto auto;
 }
 ```
 
